@@ -1,0 +1,125 @@
+/* variables */
+@grey-light: #34495e;
+@grey-heavy: #223440;
+@red: #de4639;
+@yellow: #eab71e;
+@green: #2bae6c;
+
+/* mixins */
+.radius(@radius: 4px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -msie-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.radius-bottom-left(@x: 30px, @y: 50px) {
+    -webkit-border-bottom-left-radius: @x @y;
+    -moz-border-bottom-left-radius: @x @y;
+    -msie-border-bottom-left-radius: @x @y;
+    -o-border-bottom-left-radius: @x @y;
+    border-bottom-left-radius: @x @y;
+}
+
+.radius-bottom-right(@x: 30px, @y: 50px) {
+    -webkit-border-bottom-right-radius: @x @y;
+    -moz-border-bottom-right-radius: @x @y;
+    -msie-border-bottom-right-radius: @x @y;
+    -o-border-bottom-right-radius: @x @y;
+    border-bottom-right-radius: @x @y;
+}
+
+.first-light-decorate {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: -12px;
+    display: block;
+    width: 100%-12px;
+    height: 12px;
+    background-color: @grey-light;
+    .radius(12px 12px 0 0);
+}
+
+.top-shade {
+  position: absolute;
+  top: 8px;
+  width: 50px;
+  height: 50px;
+  background-color: @grey-light;
+
+  &-left {
+    left: -50px;
+    .radius-bottom-left(30px, 50px);
+  }
+
+  &-right {
+    right: -50px;
+    .radius-bottom-right(30px, 50px);
+  }
+}
+
+.light-inner {
+    width: 86px;
+    height: 86px;
+    padding: 4px;
+    margin: 0px auto;
+    background-color: @grey-heavy;
+    .radius();
+}
+
+.light {
+    width: 86px;
+    height: 86px;
+    .radius(50%);
+
+    &-red {
+        background-color: @red;
+    }
+
+    &-yellow {
+        background-color: @yellow;
+    }
+
+    &-green {
+        background-color: @green;
+    }
+
+    &-off {
+        background-color: @grey-light;
+    }
+}
+
+.light-outer{
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    background-color: @grey-light;
+    margin-bottom: 8px;
+    width: 130px;
+    height: 94px;
+    .radius();
+
+    &::after {
+        content: '';
+        display: block;
+        margin: 0 auto;
+        width: 100%-12px;
+        height: 8px;
+        background-color: @grey-light;
+    }
+
+    &:nth-of-type(3) {
+        &::after {
+            height: 12px;
+            .radius(0 0 12px 12px);
+        }
+    }
+}
+
+.traffic-light{
+    width: 240px;
+    height: 360px;
+}
