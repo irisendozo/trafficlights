@@ -19,7 +19,7 @@ describe('TrafficLightComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create the traffic light component', () => {
     expect(component).toBeTruthy();
   });
 });

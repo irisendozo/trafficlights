@@ -1,6 +1,7 @@
 /* variables */
 @grey-light: #34495e;
 @grey-heavy: #223440;
+@off: #63697C;
 @red: #de4639;
 @yellow: #eab71e;
 @green: #2bae6c;
@@ -61,6 +62,12 @@
   }
 }
 
+.light {
+    width: 86px;
+    height: 86px;
+    .radius(50%);
+}
+
 .light-inner {
     width: 86px;
     height: 86px;
@@ -68,27 +75,21 @@
     margin: 0px auto;
     background-color: @grey-heavy;
     .radius();
-}
 
-.light {
-    width: 86px;
-    height: 86px;
-    .radius(50%);
-
-    &-red {
+    .red {
         background-color: @red;
     }
 
-    &-yellow {
+    .yellow {
         background-color: @yellow;
     }
 
-    &-green {
+    .green {
         background-color: @green;
     }
 
-    &-off {
-        background-color: @grey-light;
+    .off {
+        background-color: @off;
     }
 }
 

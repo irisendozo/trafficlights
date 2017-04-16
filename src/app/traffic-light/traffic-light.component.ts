@@ -7,10 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TrafficLightComponent implements OnInit {
   @Input() name: string;
+  @Input() state: string;
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() { }
 }
