@@ -1,5 +1,7 @@
 <h1 class="center"> Traffic Light Demo </h1>
 <div class="traffic-container-light">
-  <app-traffic-light name="North-South" state="red"></app-traffic-light>
-  <app-traffic-light name="East-West" state="green"></app-traffic-light>
+    <app-traffic-light name="North" state="{{ intersection.north }}"></app-traffic-light>
+    <app-traffic-light name="South" state="{{ intersection.south }}"></app-traffic-light>
+    <app-traffic-light name="East" state="{{ intersection.east }}"></app-traffic-light>
+    <app-traffic-light name="West" state="{{ intersection.west }}"></app-traffic-light>
 </div>
