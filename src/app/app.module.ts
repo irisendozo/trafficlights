@@ -6,6 +6,10 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { TrafficLightComponent } from './traffic-light/traffic-light.component';
 
+import { CYCLE, TrafficControllerService } from './core/traffic-controller.service';
+import { TrafficLoggerService } from './core/traffic-logger.service';
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +20,11 @@ import { TrafficLightComponent } from './traffic-light/traffic-light.component';
     FormsModule,
     HttpModule,
   ],
-  providers: [],
+  providers: [
+    TrafficControllerService,
+    TrafficLoggerService,
+    { provide: CYCLE, useValue: environment.cycle },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
