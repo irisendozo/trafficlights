@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
 import { TrafficLightComponent } from './traffic-light/traffic-light.component';
 
@@ -16,7 +15,6 @@ import { TrafficLightComponent } from './traffic-light/traffic-light.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
