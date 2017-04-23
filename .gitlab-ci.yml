@@ -1,0 +1,22 @@
+image: node:6.9.4
+
+before_script:
+  - apt-get --quiet update --yes
+  - apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1
+
+#  install node js
+  - apt-get --quiet install -y build-essential
+  - curl -sL http://deb.nodesource.com/setup_6.x | bash -
+  - apt-get --quiet install -y nodejs
+  - apt-get --quiet update --yes
+  - npm -v
+
+stages:
+  - test
+
+#deploy debug
+test:
+  stage: test
+  script:
+    - npm install
+    - npm run test
