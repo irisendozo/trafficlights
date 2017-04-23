@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  cycle: 300000,
+  // Traffic light cycle in mins
+  cycle: 5,
 };

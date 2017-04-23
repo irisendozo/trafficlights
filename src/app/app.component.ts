@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Light, Intersection } from './core/traffic-controller.model';
-import { CYCLE, TrafficControllerService } from './core/traffic-controller.service';
+import { Light, Intersection } from './core/traffic.model';
+import { CYCLE, TrafficControllerService } from './core/traffic-intersection-controller.service';
 import { TrafficLoggerService } from './core/traffic-logger.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { TrafficLoggerService } from './core/traffic-logger.service';
 })
 export class AppComponent implements OnInit {
   /**
-   * The model for the traffic lights on the view
+   * The model representation for the traffic lights on the view
    *
    * @memberOf AppComponent
    */
@@ -23,16 +23,14 @@ export class AppComponent implements OnInit {
   ) { }
 
   /**
-   * Initialize the traffic controller and set up the subscribers of the intersection
-   * by logging the results on the console and setting the resulting lights on
-   * the view
+   * Initialize the traffic controller and service logger to log the results on the console every
+   * minute (and every after light change) and set the intersection light colors on the view
    *
    * @memberOf AppComponent
    */
   ngOnInit() {
+    this.trafficLogger.activateLogger();
     this.trafficController.scheduler();
-    // Once the intersection subject is ready with a new value, log it and
-    // set it to the view
     this.trafficController.intersection
       .subscribe((intersection: Intersection) => {
         this.trafficLogger.log(intersection);

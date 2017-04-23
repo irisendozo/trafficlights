@@ -4,8 +4,8 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { MockComponent } from './mocks/mock.component';
 import { AppComponent } from './app.component';
 
-import { Intersection } from './core/traffic-controller.model';
-import { CYCLE, TrafficControllerService } from './core/traffic-controller.service';
+import { Intersection } from './core/traffic.model';
+import { CYCLE, TrafficControllerService } from './core/traffic-intersection-controller.service';
 import { TrafficLoggerService } from './core/traffic-logger.service';
 
 describe('AppComponent', () => {
@@ -14,7 +14,7 @@ describe('AppComponent', () => {
 
   beforeEach(async(() => {
     mockTrafficControllerService = jasmine.createSpyObj('TrafficController', ['scheduler', 'intersection']);
-    mockTrafficLoggerService = jasmine.createSpyObj('TrafficLogger', ['log']);
+    mockTrafficLoggerService = jasmine.createSpyObj('TrafficLogger', ['log', 'activateLogger']);
     mockTrafficControllerService.intersection =
       new BehaviorSubject({ north: 'green', south: 'green', east: 'red', west: 'red' } as Intersection);
 

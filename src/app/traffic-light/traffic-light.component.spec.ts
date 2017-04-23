@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { InjectionToken } from '@angular/core';
 
 import { TrafficLightComponent } from './traffic-light.component';
 
@@ -8,7 +9,7 @@ describe('TrafficLightComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TrafficLightComponent ]
+      declarations: [TrafficLightComponent]
     })
     .compileComponents();
   }));
