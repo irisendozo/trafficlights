@@ -1,8 +1,4 @@
-# Traffic Demo
-[![build status](https://gitlab.com/nesiri/trafficlights/badges/master/build.svg)](https://gitlab.com/nesiri/trafficlights/commits/master) [![coverage report](https://gitlab.com/nesiri/trafficlights/badges/master/coverage.svg)](https://gitlab.com/nesiri/trafficlights/commits/master)
-
-
-https://gitlab.com/nesiri/trafficlights/commits/master)
+# Traffic Demo [![build status](https://gitlab.com/nesiri/trafficlights/badges/master/build.svg)](https://gitlab.com/nesiri/trafficlights/commits/master) [![coverage report](https://gitlab.com/nesiri/trafficlights/badges/master/coverage.svg)](https://gitlab.com/nesiri/trafficlights/commits/master)
 
 ![Traffic Light Intersection Demo][demo]
 
