@@ -6,6 +6,7 @@
     "start": "node_modules/@angular/cli/bin/ng serve",
     "build": "node_modules/@angular/cli/bin/ng build",
     "test": "node_modules/@angular/cli/bin/ng test",
+    "test:ci": "node_modules/@angular/cli/bin/ng test --code-coverage --single-run --browsers ChromeCI",
     "lint": "node_modules/@angular/cli/bin/ng lint"
   },
   "private": true,
